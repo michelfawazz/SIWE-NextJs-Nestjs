@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-//const BASE_URL = 'https://dolphin-app-ac48r.ondigitalocean.app/';
 
-const BASE_URL = 'http://localhost:3002/';
+const BASE_URL = process.env.BACKEN_URL;
 
 
 export default axios.create({

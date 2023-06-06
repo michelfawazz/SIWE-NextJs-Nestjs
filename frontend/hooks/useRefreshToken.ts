@@ -1,6 +1,5 @@
 "use client";
 
-import { useSession } from "next-auth/react";
 import axios from "@/lib/axios";
 import { getCookie,setCookie } from '@/lib/cookies'
 export const useRefrestToken = () => {
