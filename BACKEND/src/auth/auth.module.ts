@@ -9,7 +9,6 @@ import { EthereumService } from 'src/ethereum/ethereum.service';
 import { JwtStrategy } from './strategies/jwt-strategy';
 import { SiweStrategy } from './strategies/siwe-strategy';
 import { RefreshJwtStrategy } from './strategies/refreshToken.strategy';
-import { AuthController } from './auth.controller';
 
 import * as dotenv from 'dotenv';
 dotenv.config()
@@ -19,11 +18,10 @@ dotenv.config()
       PassportModule,
       JwtModule.register({
         secret: process.env.JWT_SECRET_KEY,
-        signOptions: { expiresIn: '3600s' },
+        signOptions: { expiresIn: '6h' },
       }),
       TypeOrmModule.forFeature([Client]),
     ],
-    controllers:[AuthController]
   
   })
 export class AuthModule {}
