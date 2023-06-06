@@ -3,6 +3,10 @@
 
 SIWE Authentication with NestJS and Nextjs for Xborg Tech challenge
 
+- the front end uses NextJS 13 app router to build out a SIWE authentication flow utilizing next middleware to handle authentiction between pages and uses an axios interceptor to call the back end by adding the bearer token to the request header and also calls the refresh function in the backend if the access token has expired
+- the backend uses NestJS framework to build out the backend authentication flow the project uses SQLite as the database with typeORM to interact with it. the backend makes use of access_tokens as well as refresh tokens for increased security within the app 
+
+
 
 ## Contents
    press on the links below to read the respective read me files
