@@ -46,7 +46,8 @@ export function DashboardShell({
   const logout =( )=> {
     setCookie('access_token', null)
     setCookie('refresh_token', null)
-    router.push("/login")
+    router.replace('/')
+    router.refresh()
     
   }
 
